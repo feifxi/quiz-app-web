@@ -1,0 +1,466 @@
+{
+  "users": [
+    {
+      "userName": "admin",
+      "profilePic": "https://i1.sndcdn.com/artworks-9R6zUytOmPor6P2n-8tUdCw-t500x500.jpg",
+      "profileFrame": {
+        "color1": "",
+        "color2": "",
+        "color3": "",
+        "color4": "",
+        "color5": "",
+        "selectedMode": ""
+      },
+      "id": "9ffe",
+      "email": "admin@admin.com",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "3ad1",
+      "email": "user@user.com",
+      "userName": "user",
+      "password": "123",
+      "role": "user",
+      "profilePic": ""
+    },
+    {
+      "userName": "guuy",
+      "profilePic": "",
+      "profileFrame": {
+        "color1": "#c20000",
+        "color2": "#0818f7",
+        "color3": "#c41717",
+        "color4": "#d8cbcb",
+        "color5": "#3e1d1d",
+        "selectedMode": "left"
+      },
+      "id": "f517",
+      "email": "guy@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "userName": "fei",
+      "profilePic": "https://ih1.redbubble.net/image.2517271689.2840/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+      "profileFrame": {
+        "color1": "",
+        "color2": "",
+        "color3": "",
+        "color4": "",
+        "color5": "",
+        "selectedMode": ""
+      },
+      "id": "5ae6",
+      "email": "fei@fei.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "3b09",
+      "email": "yorch@gmail.com",
+      "userName": "yorch",
+      "password": "123",
+      "role": "user",
+      "profilePic": ""
+    },
+    {
+      "userName": "test",
+      "profilePic": "",
+      "profileFrame": {
+        "color1": "#ff6666",
+        "color2": "#ff0000",
+        "color3": "#a80000",
+        "color4": "#990000",
+        "color5": "#750000",
+        "selectedMode": "bottom"
+      },
+      "id": "b788",
+      "email": "test@gmail.com",
+      "password": "123",
+      "role": "user"
+    }
+  ],
+  "quizs": [
+    {
+      "id": "fa80",
+      "title": "Come with me free wifi",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCaakBZPdp2-Hcx8rdZEC_mEgnY2fk28nYwQ&s",
+      "description": "This quiz is goofy ahh go away if you dont wanna brainrot, but you can continue and become sigma wolf btw",
+      "createBy": {
+        "id": "9ffe",
+        "email": "admin@admin.com",
+        "userName": "admin",
+        "password": "123",
+        "role": "admin",
+        "profilePic": ""
+      },
+      "status": "publish",
+      "reactions": [
+        "f517",
+        "b788",
+        "9ffe"
+      ],
+      "comments": [
+        {
+          "user": {
+            "userName": "admin",
+            "profilePic": "https://i1.sndcdn.com/artworks-9R6zUytOmPor6P2n-8tUdCw-t500x500.jpg",
+            "profileFrame": {
+              "color1": "",
+              "color2": "",
+              "color3": "",
+              "color4": "",
+              "color5": "",
+              "selectedMode": ""
+            },
+            "id": "9ffe",
+            "email": "admin@admin.com",
+            "password": "123",
+            "role": "admin"
+          },
+          "text": "This is masterpiece🤑🤑🤑"
+        }
+      ],
+      "adminComments": [],
+      "playerProgress": [
+        {
+          "userId": "9ffe",
+          "star": 6
+        },
+        {
+          "userId": "f517",
+          "star": 1
+        },
+        {
+          "userId": "3b09",
+          "star": 7
+        }
+      ],
+      "levels": [
+        {
+          "template": "Multiple-choice-text",
+          "question": "The Best Course in IT Major",
+          "questionImage": "",
+          "choices": [
+            {
+              "value": "Miracle of Thinking",
+              "isAns": true
+            },
+            {
+              "value": "Sever-Side ",
+              "isAns": false
+            },
+            {
+              "value": "Client-Side ",
+              "isAns": false
+            },
+            {
+              "value": "Network",
+              "isAns": false
+            }
+          ]
+        },
+        {
+          "template": "Multiple-choice-image",
+          "question": "The Best Frontend Framework",
+          "questionImage": "",
+          "choices": [
+            {
+              "value": "https://miro.medium.com/v2/resize:fit:1200/0*iDyUUc_sCpMxiD0t.jpeg",
+              "isAns": true
+            },
+            {
+              "value": "https://cdn.dritestudio.co.th/api/img/cllg9do6o0006b7xjjmp65ua7",
+              "isAns": false
+            },
+            {
+              "value": "https://www.designil.com/wp-content/uploads/2021/06/teaser.png",
+              "isAns": false
+            },
+            {
+              "value": "https://miro.medium.com/v2/resize:fit:783/1*Kj8Eq401fP2ecTY8r9B89Q.png",
+              "isAns": false
+            }
+          ]
+        },
+        {
+          "template": "Matched",
+          "question": "Match all pairs by pairing a left-sided button to a right-sided button.",
+          "questionImage": "",
+          "choices": [
+            {
+              "key": "One",
+              "pair": "Uno",
+              "selectedPair": ""
+            },
+            {
+              "key": "Two",
+              "pair": "Dos",
+              "selectedPair": ""
+            },
+            {
+              "key": "Three",
+              "pair": "Tres",
+              "selectedPair": ""
+            },
+            {
+              "key": "Four",
+              "pair": "Cuatro",
+              "selectedPair": ""
+            }
+          ]
+        },
+        {
+          "template": "Matched",
+          "question": "Match the food with its corresponding food types.",
+          "questionImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg",
+          "choices": [
+            {
+              "key": "Carbohydrates",
+              "pair": "Rice",
+              "selectedPair": ""
+            },
+            {
+              "key": "Proteins",
+              "pair": "Beef",
+              "selectedPair": ""
+            },
+            {
+              "key": "Vegetables",
+              "pair": "Lemongrass",
+              "selectedPair": ""
+            },
+            {
+              "key": "Fats",
+              "pair": "Cake",
+              "selectedPair": ""
+            }
+          ]
+        },
+        {
+          "template": "Word-Shuffle",
+          "question": "เรียงเลขจากน้อยไปมาก",
+          "questionImage": "https://engbreaking.co.th/wp-content/uploads/2020/12/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%A5%E0%B8%82%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%AD%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A4%E0%B8%A9%E0%B8%81%E0%B8%B1%E0%B8%9A-X3english-Learn-English-numbers-together-with-X3English.jpg",
+          "choices": [
+            {
+              "value": "12",
+              "order": 0
+            },
+            {
+              "value": "34",
+              "order": 1
+            },
+            {
+              "value": "56",
+              "order": 2
+            },
+            {
+              "value": "78",
+              "order": 3
+            },
+            {
+              "value": "90",
+              "order": 4
+            },
+            {
+              "value": "91",
+              "order": 5
+            },
+            {
+              "value": "99",
+              "order": 6
+            },
+            {
+              "value": "99.1",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "template": "Image-Shuffle",
+          "question": "เรียงลำดับความแหลมของคาง",
+          "questionImage": "https://static.beebom.com/wp-content/uploads/2025/01/jinwoo-solo-leveling.jpg",
+          "choices": [
+            {
+              "value": "https://i1.sndcdn.com/artworks-C5gl8UDRFK7ydaFh-MkhgaA-t1080x1080.jpg",
+              "order": 0
+            },
+            {
+              "value": "https://s.yimg.com/ny/api/res/1.2/ecbWS8_yEm1MoWncNhmGJw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTk-/https://media.zenfs.com/en/comingsoon_net_477/d8f30b8f6032c59636b56030955bfc16",
+              "order": 1
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_GCSnMHvbQ1nn3BZLduoZr2U4G3eid3ZNA42prwokcitfZtS7TADEXISoWWGndO1v8jg&usqp=CAU",
+              "order": 2
+            },
+            {
+              "value": "https://i.redd.it/q7c9yiqu7wqe1.jpeg",
+              "order": 3
+            },
+            {
+              "value": "https://preview.redd.it/why-did-they-make-his-chin-look-rounded-in-many-frames-last-v0-l369vpjozrqe1.jpeg?width=2096&format=pjpg&auto=webp&s=782c2da93573bf27b6ca9717f6240059b81825ad",
+              "order": 4
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYEOzlbk8lmp69mw7D3c5GMm_n0fBgy4iKSA&s",
+              "order": 5
+            },
+            {
+              "value": "",
+              "order": 6
+            },
+            {
+              "value": "",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "template": "WordCheck",
+          "question": "_igg__",
+          "questionImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3mNVQWktmzXfPBNGFxM6xaWYjMBC878TJAomqlh1b9pvwVZ3Jywlsks3vMmgRFVnHjQ&usqp=CAU",
+          "choices": [
+            {
+              "value": "bigger"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "56a4",
+      "title": "Guess the Character",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVT_gwzsq756k0eQnwwgauxEa7so3BmEYeBg&s",
+      "description": "Guess the correct character from the images 🤩🤩",
+      "createBy": {
+        "userName": "admin",
+        "profilePic": "https://i1.sndcdn.com/artworks-9R6zUytOmPor6P2n-8tUdCw-t500x500.jpg",
+        "profileFrame": {
+          "color1": "",
+          "color2": "",
+          "color3": "",
+          "color4": "",
+          "color5": "",
+          "selectedMode": ""
+        },
+        "id": "9ffe",
+        "email": "admin@admin.com",
+        "password": "123",
+        "role": "admin"
+      },
+      "status": "publish",
+      "reactions": [
+        "5ae6",
+        "9ffe"
+      ],
+      "comments": [
+        {
+          "user": {
+            "userName": "admin",
+            "profilePic": "https://i1.sndcdn.com/artworks-9R6zUytOmPor6P2n-8tUdCw-t500x500.jpg",
+            "profileFrame": {
+              "color1": "",
+              "color2": "",
+              "color3": "",
+              "color4": "",
+              "color5": "",
+              "selectedMode": ""
+            },
+            "id": "9ffe",
+            "email": "admin@admin.com",
+            "password": "123",
+            "role": "admin"
+          },
+          "text": "You are my sunshine"
+        }
+      ],
+      "adminComments": [],
+      "playerProgress": [
+        {
+          "userId": "5ae6",
+          "star": 2
+        },
+        {
+          "userId": "3b09",
+          "star": 3
+        },
+        {
+          "userId": "9ffe",
+          "star": 3
+        }
+      ],
+      "levels": [
+        {
+          "template": "Multiple-choice-image",
+          "question": "เอส หมัดอัคคีภัย",
+          "questionImage": "",
+          "choices": [
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzASIsaa8_N1Ksb3EwThyOBm_1icUAUku7NA&s",
+              "isAns": true
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMaQeGzoz5zYdJ8UKezFdagr_C4h1cvYbetw&s",
+              "isAns": false
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREQKXgDcSHWPk6Y2uXmIB2G2xrJz7QA241efWawo7OPGErRAUu11-HfO56Qefi-3134wM&usqp=CAU",
+              "isAns": false
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdqz6fdsvs-APRKP29dxh-N3gEROAT3-Yw5A&s",
+              "isAns": false
+            }
+          ]
+        },
+        {
+          "template": "Multiple-choice-image",
+          "question": "เบจิต้า",
+          "questionImage": "",
+          "choices": [
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBRk_OsV3lMi8OgfuM_vECLa1PPc4XSCctUpTcDOQlbPz9VsBryhhQoIZTNbGEXpxr4iE&usqp=CAU",
+              "isAns": true
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF1r0mBbGc1MrkIxJbZ2z0VYEmZZNijlC4bhMrNkgbX70I9G_QUAuihtRLxdKgwONK5Uw&usqp=CAU",
+              "isAns": false
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GUSDM52W53fKMyKNKwzd0gBgWDEmUqszspgrVnDLiA21JHBAT9OZYfn14bm2IIOdiJA&usqp=CAU",
+              "isAns": false
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcS_pnOSs1uqFgfR2MsZ60ZkJCLk43TFRqZcWNNjaDZAay99QNKn6WAztqm95jE8SrKhY&usqp=CAU",
+              "isAns": false
+            }
+          ]
+        },
+        {
+          "template": "Multiple-choice-image",
+          "question": "Mbappe",
+          "questionImage": "",
+          "choices": [
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiNInq7Gfnz1FAn8nYsKIk8qtZGjWo7zDJFQA0u3jA4mCd4znPvGurc1WPDCF3gDc4QlA&usqp=CAU",
+              "isAns": true
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtN03t8m52A6iOk0xrLFFpIK1StMHGokrS-e0GQNxaOWAl-BOSrCeZ4T7PFnx2_iX4sug&usqp=CAU",
+              "isAns": false
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpAfwt9mzgArXmJcJfkPfHrF2q0SyXm_iKj8VQ8GU4FgVxFkDKYwNwAkGzDdA42SGtQ-4&usqp=CAU",
+              "isAns": false
+            },
+            {
+              "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSTfMAYYRzMjEXF-t8ZVDM47hCt2AOi-qIl8JkLggDGbcV7VjbN1Yvu5NKaGxYd38PzGI&usqp=CAU",
+              "isAns": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
