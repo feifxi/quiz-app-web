@@ -1,6 +1,7 @@
 import { ref } from "vue";
 import { defineStore, acceptHMRUpdate } from "pinia";
-import { getUserById } from "@/api/usersAPI";
+
+const API_ROOT = import.meta.env.VITE_API_ROOT
 
 export const useAuthStore = defineStore("auth", () => {
   const authUser = ref(null);
@@ -10,10 +11,23 @@ export const useAuthStore = defineStore("auth", () => {
     const userId = localStorage.getItem("userId");
     if (!userId) return;
 
-    const res = await getUserById(userId);
-    if (res.success) {
-      authUser.value = res.data;
-      isAuthenticated.value = true;
+    try {
+      const res = await fetch(`${API_ROOT}/check-auth`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userId),
+      });
+      if (res.ok) {
+        authUser.value = await res.json();
+        isAuthenticated.value = true
+        console.log(authUser.value)
+      }
+      else {
+        throw new Error("Error in server") 
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Something went wrong...")
     }
   };
 

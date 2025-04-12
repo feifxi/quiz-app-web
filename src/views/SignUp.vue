@@ -1,7 +1,8 @@
 <script setup>
 import Button from '@/components/Button.vue';
-import { createUser, getAllUsers } from '@/api/usersAPI';
 import { reactive } from 'vue';
+
+const API_ROOT = import.meta.env.VITE_API_ROOT
 
 const userData = reactive({
   email: '',
@@ -10,23 +11,27 @@ const userData = reactive({
 })
 
 const signUp = async (e) => {
-  e.preventDefault()
-  if (!userData.email || !userData.userName || !userData.password) {
-    return alert('fill all input')
-  }
-  const existUser = await getAllUsers([{
-    key: 'email',
-    value: userData.email
-  }])
-  const user = existUser.data[0]
-  if (user) return alert('This email is belong to existing account')
+  try {
+    e.preventDefault()
+    if (!userData.email || !userData.userName || !userData.password) {
+      return alert('fill all input')
+    }
 
-  const res = await createUser({
-    ...userData,
-    role: 'user',
-    profilePic: '',
-  })
-  alert('Create Account Success!')
+    const res = await fetch(`${API_ROOT}/register`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userData),
+    });
+    if (res.ok) {
+      alert('Create Account Success!')
+    }
+    console.log(await res.json())
+
+  } catch (error) {
+    console.log(error);
+    alert('Something went wrong...')
+  }
+ 
 }
 </script>
 
@@ -50,7 +55,7 @@ const signUp = async (e) => {
           <input type="password" class="input" v-model="userData.password" />
         </div>
 
-        <Button label="Create Account" :click="signUp"></Button>
+        <Button :click="signUp">Create Account</Button>
       </form>
     </div>
   </section>

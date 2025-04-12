@@ -173,9 +173,13 @@ const isQuizDataValid = () => {
       </div>
 
       <div class="flex gap-3 self-end">
-        <Button label="Add More Levels" :click="addMoreQuiz"
-          class-name="bg-sky-500 border-b-sky-600 active:bg-sky-600"></Button>
-        <Button label="Create Quiz" :click="handleCreateGame"></Button>
+        <Button class-name="bg-sky-500 border-b-sky-600 active:bg-sky-600" :click="addMoreQuiz" >
+          Add More Levels
+        </Button>
+        
+        <Button :click="handleCreateGame">
+          Create Quiz
+        </Button>
       </div>
     </div>
   </section>

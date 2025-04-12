@@ -12,13 +12,6 @@ const gameHasPlayed = ref(0);
 const allGameInPlatform = ref(0);
 const quizs = ref([])
 
-const handleUserProfileImg = (imgLink) => {
-  if (!imgLink) {
-    return 'https://img.myloview.com/posters/default-avatar-profile-icon-vector-social-media-user-photo-700-205577532.jpg';
-  } else {
-    return imgLink;
-  }
-}
 
 onMounted(async () => {
   try {
@@ -53,15 +46,10 @@ onMounted(async () => {
 <template>
   <section class="max-w-lg mx-auto bg-white p-6 mt-10 rounded-2xl shadow-lg border border-gray-200">
     <div class="text-center mb-6">
-      <div :class="'relative w-35 h-35 mx-auto flex items-center justify-center border-2 border-black rounded-full '"
-        :style="{
-          backgroundImage: 'linear-gradient(to ' + (userUsed.profileFrame?.selectedMode || 'top') + ','
-            + (userUsed.profileFrame?.color1 || 'lime') + ',' + (userUsed.profileFrame?.color2 || 'lime')
-            + ',' + (userUsed.profileFrame?.color3 || 'lime') + ',' + (userUsed.profileFrame?.color4 || 'lime') + ',' + (userUsed.profileFrame?.color5 || 'lime') + ')'
-        }">
-        <img class="border-2 w-30 h-30 rounded-full  object-cover" :src="handleUserProfileImg(userUsed.profilePic)"
-          alt="Profile Picture" />
-
+      <div class='flex justify-center'>
+        <img
+          :src="userUsed.profilePic || 'https://img.myloview.com/posters/default-avatar-profile-icon-vector-social-media-user-photo-700-205577532.jpg'"
+          class="border-2 size-30 rounded-full  object-cover" alt="Profile Picture" />
       </div>
       <h2 class="text-2xl font-semibold mt-3">{{ userUsed?.userName || "Guest" }}</h2>
       <p class="text-gray-600">{{ userUsed?.email || "No email provided" }}</p>
@@ -90,7 +78,9 @@ onMounted(async () => {
 
     <div class="mt-6 text-center">
       <RouterLink to="/editProfile">
-        <Button label="Edit Profile"></Button>
+        <Button>
+          Edit Profile
+        </Button>
       </RouterLink>
 
     </div>
@@ -98,7 +88,7 @@ onMounted(async () => {
   <section class="max-w-[80%] mx-auto bg-white p-6 mt-10 rounded-2xl shadow-lg border border-gray-200 mb-10">
     <div>
       <p class="text-center text-3xl font-bold my-5">Games Owned</p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-3">
         <QuizCard v-for="quiz of quizs" :quiz="quiz" />
       </div>
     </div>

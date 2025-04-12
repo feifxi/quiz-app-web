@@ -31,19 +31,26 @@ const handleApproveQuiz = async () => {
         <div v-if="isEditMode" class="absolute right-3 top-3 flex flex-col items-end gap-2">
             <div class="flex gap-2">
                 <RouterLink :to="{ name: 'update', params: { quizId: quiz.id } }">
-                    <Button :label="isAdmin ? 'Preview' : 'Edit'" class-name="bg-blue-500 active:bg-blue-600"></Button>
+                    <Button class-name="bg-blue-500 active:bg-blue-600">
+                        {{ isAdmin ? 'Preview' : 'Edit' }}
+                    </Button>
                 </RouterLink>
-                <Button :label="'Delete'" class-name="bg-red-500 active:bg-red-600 border-b-3 border-red-600"
-                    :click="handleDeleteQuiz"></Button>
+                <Button class-name="bg-red-500 active:bg-red-600 border-b-3 border-red-600" 
+                    :click="handleDeleteQuiz">
+                    Delete
+                </Button>
             </div>
-            <Button v-if="isAdmin && quiz.status == 'pending'" :label="'Approve'"
+            <Button v-if="isAdmin && quiz.status == 'pending'"
                 class-name="bg-yellow-400 active:bg-yellow-500 w-1/2 border-b-3 border-yellow-500"
                 :click="handleApproveQuiz">
+                Approve
             </Button>
         </div>
-        <div @click="showLevelModal" :class="'flex-1 bg-white ' + (isEditMode ? '' : 'cursor-pointer')">
+        <div @click="showLevelModal" :class="'flex-1 bg-white rounded-t-xl ' + (isEditMode ? '' : 'cursor-pointer')">
             <img :src="quiz.thumbnail || 'https://www.shutterstock.com/image-vector/quiz-logo-time-label-question-260nw-2299277831.jpg'"
-                alt="quiz thumbnail" class="object-cover rounded-t-xl w-full h-[200px]" />
+                alt="quiz thumbnail" 
+                class="object-cover rounded-t-xl w-full h-[200px]" 
+            />
             <div class="p-3 flex flex-col">
                 <p class="text-xl font-bold text-wrap flex-1">
                     {{ quiz.title }}

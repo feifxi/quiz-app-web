@@ -48,7 +48,7 @@ const signIn = async (e) => {
           <input type="password" class="input" v-model="userData.password" />
         </div>
 
-        <Button label="Sign In" :click="signIn"></Button>
+        <Button :click="signIn">Sign In</Button>
       </form>
     </div>
   </section>

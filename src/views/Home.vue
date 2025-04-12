@@ -12,7 +12,6 @@ const authStore = useAuthStore()
 const route = useRoute()
 const router = useRouter()
 
-let stateQuiz = ref(true)
 const quizs = ref([])
 const isLoading = ref(false)
 const modal = reactive({
@@ -20,19 +19,12 @@ const modal = reactive({
   type: '',
   quizData: null
 })
-const changeState = () => {
-  stateQuiz.value = !stateQuiz.value
-  console.log(stateQuiz)
-}
+
 
 const fetchAllQuizs = async () => {
   isLoading.value = true
   const res = await getAllQuizs([{ key: 'status', value: 'publish' }])
-  if (stateQuiz.value) {
-    quizs.value = res.data.sort((a, b) => a.createBy.userName.localeCompare(b.createBy.userName))
-  } else if (!stateQuiz.value) {
-    quizs.value = res.data.sort((a, b) => b.reactions.length - a.reactions.length)
-  }
+  quizs.value = res.data
   isLoading.value = false
 }
 
@@ -61,7 +53,7 @@ const handleCloseModal = () => {
 
 onMounted(() => {
   fetchAllQuizs()
-  // Show Quiz Level Modal
+  
   const { quizId } = route.query
   if (quizId) {
     handleShowModal(quizId, "LEVEL")
@@ -79,9 +71,6 @@ onMounted(() => {
   </div>
 
   <section v-else>
-    <div class="absolute bottom-5 right-5">
-      <Icon name="sort" class-name=" fill-green-500" @click="() => { changeState(); fetchAllQuizs(); }" />
-    </div>
     <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3 p-3">
       <QuizCard v-for="quiz of quizs" :quiz="quiz" :show-level-modal="() => { handleShowModal(quiz.id, 'LEVEL') }"
         :show-comment-modal="() => { handleShowModal(quiz.id, 'COMMENT') }" :is-edit-mode="false" />

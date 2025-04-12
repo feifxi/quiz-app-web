@@ -1,8 +1,8 @@
 <script setup>
 const { name, className } = defineProps({
     name: String,
-    className: String
-})
+    className: String,
+});
 </script>
 
 <template>
@@ -52,7 +52,6 @@ const { name, className } = defineProps({
                 stroke="#2bff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
         </g>
     </svg>
-
 </template>
 
 <style scoped></style>
